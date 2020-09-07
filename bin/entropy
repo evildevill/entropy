@@ -1,0 +1,128 @@
+#!/bin/bash
+
+printf '\033]2;Entropy Toolkit\a'
+
+G="\033[1;34m[*] \033[0m"
+S="\033[1;32m[+] \033[0m"
+E="\033[1;31m[-] \033[0m"
+
+if [[ "$1" = "-u" || "$1" = "--update" ]]
+then
+if [[ -d /data/data/com.termux ]]
+then
+if [[ -f /data/data/com.termux/files/usr/bin/entropy ]]
+then
+UPD="true"
+else
+UPD="false"
+fi
+else
+if [[ -f /usr/local/bin/entropy ]]
+then
+UPD="true"
+else
+UPD="false"
+fi
+fi
+{
+ASESR="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+} &> /dev/null
+if [[ "$ASESR" != 0 ]]
+then 
+   echo -e ""$E"No Internet connection!"
+   exit
+fi
+if [[ $(id -u) != 0 ]]
+then
+   echo -e ""$E"Permission denied!"
+   exit
+fi
+sleep 1
+echo -e ""$G"Installing update..."
+{
+mkdir ~/.entropy
+cp -r ~/entropy/RECHECK ~/.entropy
+rm -rf ~/entropy
+rm /bin/entropy
+rm /usr/local/bin/entropy
+rm /data/data/com.termux/files/usr/bin/entropy
+cd ~
+git clone https://github.com/evildevill/entropy.git
+if [[ "$UPD" != "true" ]]
+then
+sleep 0
+else
+cd ~/entropy
+chmod +x install.sh
+./install.sh
+fi
+cp -r ~/.entropy/RECHECK ~/entropy
+rm -rf ~/.entropy
+} &> /dev/null
+if [[ ! -d ~/entropy ]]
+then
+   echo -e ""$E"Installation failed!"
+   exit
+fi
+echo -e ""$S"Successfully updated!"
+sleep 1
+exit
+fi
+
+if [[ -d ~/entropy ]]
+then
+{
+cd ~/entropy
+mkdir etc/.disabled
+mv entropy etc/.disabled
+mv etc/entropy ~/entropy
+cp etc/.disabled/entropy etc
+rm -rf etc/.disabled
+} &> /dev/null
+chmod +x entropy
+./entropy $1 $2 $3 $4 $5 $6 $7 $8 $9
+{
+cd ~/entropy
+mkdir etc/.disabled
+mv entropy etc/.disabled
+mv etc/entropy ~/entropy
+cp etc/.disabled/entropy etc
+rm -rf etc/.disabled
+} &> /dev/null
+else
+{
+ASESR="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+} &> /dev/null
+if [[ "$ASESR" = 0 ]]
+then 
+cd ~
+{
+git clone https://github.com/evildevill/entropy.git
+cd $OLDPWD
+cd ~/entropy
+mkdir etc/.disabled
+mv entropy etc/.disabled
+mv etc/entropy ~/entropy
+cp etc/.disabled/entropy etc
+rm -rf etc/.disabled
+} &> /dev/null
+if [[ ! -d ~/entropy ]]
+then
+   echo -e ""$E"Execution failed!"
+   exit
+fi
+chmod +x entropy
+./entropy $1 $2 $3 $4 $5 $6 $7 $8 $9
+{
+cd ~/entropy
+mkdir etc/.disabled
+mv entropy etc/.disabled
+mv etc/entropy ~/entropy
+cp etc/.disabled/entropy etc
+rm -rf etc/.disabled
+} &> /dev/null
+else
+echo -e ""$E"Execution failed!"
+exit
+fi
+fi
