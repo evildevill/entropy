@@ -3,25 +3,25 @@
 ![entropy](https://user-images.githubusercontent.com/54115104/74149935-04b43100-4c1a-11ea-8bba-d2663b02184a.jpeg)
 
 <p align="center">
-  <a href="http://entynetproject.simplesite.com/">
-    <img src="https://img.shields.io/badge/entynetproject-Ivan%20Nikolsky-blue.svg">
+  <a href="http://hackerwasii.blogspot.com/">
+    <img src="https://img.shields.io/badge/EvilDevill-Ivan%20Nikolsky-blue.svg">
   </a>
-  <a href="https://github.com/entynetproject/entropy/releases">
-    <img src="https://img.shields.io/github/release/entynetproject/entropy.svg">
+  <a href="https://github.com/evildevill/entropy/releases">
+    <img src="https://img.shields.io/github/release/evildevill/entropy.svg">
   </a>
   <a href="https://wikipedia.org/wiki/Python_(programming_language)">
     <img src="https://img.shields.io/badge/language-python-blue.svg">
  </a>
-  <a href="https://github.com/entynetproject/entropy/issues?q=is%3Aissue+is%3Aclosed">
-      <img src="https://img.shields.io/github/issues/entynetproject/entropy.svg">
+  <a href="https://github.com/evildevill/entropy/issues?q=is%3Aissue+is%3Aclosed">
+      <img src="https://img.shields.io/github/issues/evildevill/entropy.svg">
   </a>
-  <a href="https://github.com/entynetproject/entropy/wiki">
+  <a href="https://github.com/evildevill/entropy/wiki">
       <img src="https://img.shields.io/badge/wiki%20-entropy-lightgrey.svg">
  </a>
-  <a href="https://twitter.com/entynetproject">
-    <img src="https://img.shields.io/badge/twitter-entynetproject-blue.svg">
+  <a href="https://twitter.com/hackerwasii">
+    <img src="https://img.shields.io/badge/twitter-hackerwasii-blue.svg">
  </a>
-  <a href="https://github.com/vanpersiexp/expcamera">
+  <a href="https://github.com/evildevill/expcamera">
     <img src="https://img.shields.io/badge/based%20on-ExpCamera-red.svg">
  </a>
 </p>
