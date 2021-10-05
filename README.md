@@ -46,8 +46,9 @@ powerful toolkit for webcams penetration testing.
 
 > chmod +x install.sh
 
-> ./install.sh
-
+> sudo bash install.sh
+> entropy
+> 
 ## Entropy uninstallation
 
 > cd entropy
