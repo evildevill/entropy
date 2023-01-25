@@ -11,9 +11,10 @@ G="\033[1;34m[*] \033[0m"
 S="\033[1;32m[+] \033[0m"
 E="\033[1;31m[-] \033[0m"
 
-if [[ $(id -u) != 0 ]]; then
-    echo -e ""$E"Permission denied!"
-    exit
+if [[ $(id -u) != 0 ]]
+then
+   echo -e ""$E"Permission denied!"
+   exit 1
 fi
 
 # Define the program name and installation directories
@@ -24,18 +25,27 @@ install_directories=("/bin/entropy" "/usr/local/bin/entropy" "/data/data/com.ter
 echo -e ""$G"This script will remove the $program_name program and its installation directories."
 read -p "Are you sure you want to continue? (y/n) " -n 1 -r
 echo
-if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-    exit
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    exit 1
 fi
 
 # Remove the program's files and installation directories
-for dir in "${install_directories}"; do
-    if [[ -d $dir ]]; then
+for dir in "${install_directories}"
+do
+    if [[ -d $dir ]]
+    then
         echo -e ""$S"Removing $dir"
-        rm -rf $dir
+        if ! rm -rf $dir; then
+            echo -e ""$E"Error: Unable to remove $dir"
+            exit 1
+        fi
+    else
+        echo -e ""$E"Error: $dir not found"
     fi
 done
 
+echo -e ""$S"Uninstallation of $program_name complete!"
 
 # #!/bin/bash
 
