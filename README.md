@@ -2,6 +2,8 @@
 
 ![entropy](https://user-images.githubusercontent.com/54115104/74149935-04b43100-4c1a-11ea-8bba-d2663b02184a.jpeg)
 
+[![Visits Badge](https://visitor-badge.laobi.icu/badge?page_id=HackerWaSi)](https://hackerwasii.com)
+
 <p align="center">
   <a href="http://hackerwasii.blogspot.com/">
     <img src="https://img.shields.io/badge/EvilDevill-Ivan%20Nikolsky-blue.svg">
