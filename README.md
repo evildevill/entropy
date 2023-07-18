@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="http://hackerwasii.blogspot.com/">
-    <img src="https://img.shields.io/badge/EvilDevill-Ivan%20Nikolsky-blue.svg">
+    <img src="https://img.shields.io/badge/EvilDevill-Hacker%20wasii-blue.svg">
   </a>
   <a href="https://github.com/evildevill/entropy/releases">
     <img src="https://img.shields.io/github/release/evildevill/entropy.svg">
