@@ -307,8 +307,8 @@ class NWThread(threading.Thread):
                             continue
                     else:
                         if args.outputfile:
-                            logger.info(color.C+"[!]"+color.E+" The IP Webcamera is not vulnerable."+color.D)
-                        print(color.C+"[!]"+color.E+" The IP Webcamera is not vulnerable."+color.D)
+                            logger.info(color.C+"[!]"+color.E+" It Seems to be that The IP Webcamera is not vulnerable."+color.D)
+                        print(color.C+"[!]"+color.E+" It Seems to be that The IP Webcamera is not vulnerable."+color.D)
     def run(self):
         try:
             macaddr=self.getMac()
@@ -325,9 +325,9 @@ class NWThread(threading.Thread):
                     time.sleep(0)
             else:
                 if args.outputfile:
-                    logger.info(color.C+"[!]"+color.E+" The IP Webcamera %s:%s is not vulnerable.%s" % (self.ip,self.port,color.D))
+                    logger.info(color.C+"[!]"+color.E+" It Seems to be that The IP Webcamera %s:%s is not vulnerable.%s" % (self.ip,self.port,color.D))
                     logger.info('')
-                print(color.C+"[!]"+color.E+" The IP Webcamera %s:%s is not vulnerable.%s" % (self.ip,self.port,color.D))
+                print(color.C+"[!]"+color.E+" It Seems to be that The IP Webcamera %s:%s is not vulnerable.%s" % (self.ip,self.port,color.D))
                 time.sleep(0)
         except Exception:
             pass
