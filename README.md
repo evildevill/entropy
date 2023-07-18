@@ -20,9 +20,6 @@
   <a href="https://github.com/evildevill/entropy/wiki">
       <img src="https://img.shields.io/badge/wiki%20-entropy-lightgrey.svg">
  </a>
-  <a href="https://twitter.com/hackerwasii">
-    <img src="https://img.shields.io/badge/twitter-hackerwasii-blue.svg">
- </a>
   <a href="https://github.com/evildevill/expcamera">
     <img src="https://img.shields.io/badge/based%20on-ExpCamera-red.svg">
  </a>
